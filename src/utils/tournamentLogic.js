@@ -64,10 +64,15 @@ export function getMagicNumber(njitTeam, sixthPlaceTeam) {
     }
   }
 
+  // NJIT clinches a top-6 spot once:
+  // njitWins + sixthPlaceLosses > total conference games
   const magicNumber =
-    (CONF_GAMES - sixthPlaceTeam.confWins) - njitTeam.confLosses + 1
+    CONF_GAMES + 1 - (njitTeam.confWins + sixthPlaceTeam.confLosses)
+
+  // NJIT is eliminated once:
+  // sixthPlaceWins + njitLosses > total conference games
   const eliminationNumber =
-    (CONF_GAMES - njitTeam.confWins) - sixthPlaceTeam.confLosses + 1
+    CONF_GAMES + 1 - (sixthPlaceTeam.confWins + njitTeam.confLosses)
 
   return {
     magicNumber,

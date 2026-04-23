@@ -175,6 +175,7 @@
     { "date": "Apr 29", "opponent": "Fairleigh Dickinson", "home": true },
     { "date": "May 5", "opponent": "Manhattan", "home": true },
     { "date": "May 9", "opponent": "Boston College", "home": false },
-    { "date": "May 9", "opponent": "Boston College", "home": false }
+    { "date": "May 9", "opponent": "Boston College", "home": false },
+    { "date": "May 10", "opponent": "Boston College", "home": false }
   ]
 }
