@@ -658,6 +658,34 @@ h3 {
     height: 1.45rem;
   }
 
+  .scenario-series-card {
+    padding: 0.85rem;
+  }
+
+  .series-team-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .series-team-row > span {
+    font-size: 0.84rem;
+  }
+
+  .selector-group,
+  .selector-group.selector-group-home {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.3rem;
+  }
+
+  .selector-btn {
+    min-width: 2.25rem;
+    font-size: 0.78rem;
+    padding: 0.32rem 0.4rem;
+  }
+
   .menu-toggle {
     display: block;
   }
