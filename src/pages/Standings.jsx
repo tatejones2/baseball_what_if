@@ -28,7 +28,7 @@ function Standings() {
         <MagicNumber njitTeam={njit} sixthPlaceTeam={sixth} />
         <article className="needs-card">
           <p className="eyebrow">What NJIT Needs</p>
-          <h3>Plain English</h3>
+          <h3>Quick Breakdown</h3>
           {eliminated ? (
             <p>
               NJIT is out if they can no longer catch UMass Lowell in conference wins.

@@ -1,4 +1,5 @@
 import { getCliNCHStatus } from '../utils/tournamentLogic'
+import TeamLogo from './TeamLogo'
 
 const statusClass = {
   CLINCHED: 'badge-clinched',
@@ -52,7 +53,12 @@ function StandingsTable({
                 <td>
                   <span className="rank-pill">{team.rank}</span>
                 </td>
-                <td>{team.name}</td>
+                <td>
+                  <div className="team-cell">
+                    <TeamLogo teamId={team.id} teamName={team.name} />
+                    <span>{team.name}</span>
+                  </div>
+                </td>
                 <td>
                   {team.confWins}-{team.confLosses}
                 </td>

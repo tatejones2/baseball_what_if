@@ -265,6 +265,46 @@ h3 {
   font-size: 0.8rem;
 }
 
+.team-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.team-logo-chip {
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #ddd6ca;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.team-logo-img {
+  width: 82%;
+  height: 82%;
+  object-fit: contain;
+  display: block;
+}
+
+.team-logo-fallback {
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 999px;
+  background: var(--color-navy);
+  color: var(--color-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .is-highlight {
   background: #fff3f3;
   border-left: 4px solid var(--color-red);
@@ -384,6 +424,71 @@ h3 {
   gap: 1rem;
 }
 
+.odds-panel {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background: #f9f5ed;
+  border: 1px solid #e5d9c5;
+}
+
+.odds-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.odds-header h2 {
+  margin-bottom: 0.25rem;
+}
+
+.odds-header p {
+  margin: 0;
+}
+
+.odds-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-bottom: 0.9rem;
+}
+
+.odds-stat-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  border-top: 3px solid var(--color-red);
+}
+
+.odds-stat-card h3 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.odds-stat-card p {
+  margin: 0.3rem 0 0;
+}
+
+.njit-game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.njit-games-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.njit-game-pick p {
+  margin: 0 0 0.3rem;
+  font-size: 0.8rem;
+  color: #56607b;
+}
+
 .preset-row {
   display: flex;
   gap: 0.7rem;
@@ -487,12 +592,72 @@ h3 {
   .quick-stats-grid,
   .series-grid,
   .needs-grid,
-  .whatif-grid {
+  .whatif-grid,
+  .odds-stats-grid,
+  .njit-game-grid,
+  .njit-games-row {
     grid-template-columns: 1fr;
+  }
+
+  .odds-header {
+    flex-direction: column;
   }
 }
 
 @media (max-width: 767px) {
+  .main-content {
+    width: calc(100% - 1rem);
+    margin: 1rem auto;
+  }
+
+  .panel,
+  .hero-section {
+    padding: 0.9rem;
+  }
+
+  .table-wrap {
+    overflow-x: visible;
+  }
+
+  .standings-table,
+  .schedule-table {
+    min-width: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .standings-table th,
+  .standings-table td,
+  .schedule-table th,
+  .schedule-table td {
+    white-space: normal;
+    word-break: break-word;
+    padding: 0.45rem;
+    font-size: 0.76rem;
+  }
+
+  .standings-table:not(.is-compact) th:nth-child(6),
+  .standings-table:not(.is-compact) td:nth-child(6),
+  .standings-table:not(.is-compact) th:nth-child(7),
+  .standings-table:not(.is-compact) td:nth-child(7) {
+    display: none;
+  }
+
+  .standings-table.is-compact th:nth-child(4),
+  .standings-table.is-compact td:nth-child(4) {
+    display: none;
+  }
+
+  .team-cell {
+    gap: 0.35rem;
+  }
+
+  .team-logo-chip,
+  .team-logo-fallback {
+    width: 1.45rem;
+    height: 1.45rem;
+  }
+
   .menu-toggle {
     display: block;
   }

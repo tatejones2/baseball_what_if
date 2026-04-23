@@ -5,6 +5,7 @@ const links = [
   { to: '/standings', label: 'Standings' },
   { to: '/schedule', label: 'Schedule' },
   { to: '/whatif', label: 'What-If' },
+  { to: '/odds', label: 'Odds' },
 ]
 
 function NavBar({ mobileOpen = false, onNavigate }) {
