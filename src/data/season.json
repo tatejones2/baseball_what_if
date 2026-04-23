@@ -141,6 +141,36 @@
       "awayWins": 0
     },
     {
+      "id": "s10",
+      "weekend": "May 8-10",
+      "home": "binghamton",
+      "away": "umbc",
+      "gamesInSeries": 3,
+      "gamesPlayed": 0,
+      "homeWins": 0,
+      "awayWins": 0
+    },
+    {
+      "id": "s11",
+      "weekend": "May 8-10",
+      "home": "maine",
+      "away": "ualbany",
+      "gamesInSeries": 3,
+      "gamesPlayed": 0,
+      "homeWins": 0,
+      "awayWins": 0
+    },
+    {
+      "id": "s12",
+      "weekend": "May 8-10",
+      "home": "umbc",
+      "away": "maine",
+      "gamesInSeries": 3,
+      "gamesPlayed": 0,
+      "homeWins": 0,
+      "awayWins": 0
+    },
+    {
       "id": "s7",
       "weekend": "May 14-16",
       "home": "umbc",
