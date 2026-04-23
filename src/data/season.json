@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "lastUpdated": "2026-04-23",
+    "season": 2026,
+    "conference": "America East",
+    "tournamentBerths": 6,
+    "totalTeams": 7,
+    "conferenceGamesPerTeam": 18
+  },
+  "teams": [
+    {
+      "id": "binghamton",
+      "name": "Binghamton",
+      "shortName": "BING",
+      "isNJIT": false,
+      "confWins": 12,
+      "confLosses": 3,
+      "overallWins": 21,
+      "overallLosses": 14
+    },
+    {
+      "id": "umbc",
+      "name": "UMBC",
+      "shortName": "UMBC",
+      "isNJIT": false,
+      "confWins": 7,
+      "confLosses": 5,
+      "overallWins": 19,
+      "overallLosses": 16
+    },
+    {
+      "id": "maine",
+      "name": "Maine",
+      "shortName": "ME",
+      "isNJIT": false,
+      "confWins": 7,
+      "confLosses": 5,
+      "overallWins": 12,
+      "overallLosses": 24
+    },
+    {
+      "id": "bryant",
+      "name": "Bryant",
+      "shortName": "BRY",
+      "isNJIT": false,
+      "confWins": 7,
+      "confLosses": 8,
+      "overallWins": 19,
+      "overallLosses": 18
+    },
+    {
+      "id": "ualbany",
+      "name": "UAlbany",
+      "shortName": "ALB",
+      "isNJIT": false,
+      "confWins": 5,
+      "confLosses": 7,
+      "overallWins": 10,
+      "overallLosses": 23
+    },
+    {
+      "id": "umasslowell",
+      "name": "UMass Lowell",
+      "shortName": "UML",
+      "isNJIT": false,
+      "confWins": 6,
+      "confLosses": 9,
+      "overallWins": 16,
+      "overallLosses": 20
+    },
+    {
+      "id": "njit",
+      "name": "NJIT",
+      "shortName": "NJIT",
+      "isNJIT": true,
+      "confWins": 4,
+      "confLosses": 11,
+      "overallWins": 13,
+      "overallLosses": 22
+    }
+  ],
+  "remainingConferenceSeries": [
+    {
+      "id": "s1",
+      "weekend": "Apr 24-26",
+      "home": "ualbany",
+      "away": "njit",
+      "gamesInSeries": 3,
+      "gamesPlayed": 0,
+      "homeWins": 0,
+      "awayWins": 0
+    },
+    {
+      "id": "s2",
+      "weekend": "Apr 24-26",
+      "home": "umasslowell",
+      "away": "bryant",
+      "gamesInSeries": 3,
+      "gamesPlayed": 0,
+      "homeWins": 0,
+      "awayWins": 0
+    },
+    {
+      "id": "s3",
+      "weekend": "Apr 24-26",
+      "home": "binghamton",
+      "away": "maine",
+      "gamesInSeries": 3,
+      "gamesPlayed": 0,
+      "homeWins": 0,
+      "awayWins": 0
+    },
+    {
+      "id": "s4",
+      "weekend": "May 1-3",
+      "home": "njit",
+      "away": "bryant",
+      "gamesInSeries": 3,
+      "gamesPlayed": 0,
+      "homeWins": 0,
+      "awayWins": 0
+    },
+    {
+      "id": "s5",
+      "weekend": "May 1-3",
+      "home": "umbc",
+      "away": "ualbany",
+      "gamesInSeries": 3,
+      "gamesPlayed": 0,
+      "homeWins": 0,
+      "awayWins": 0
+    },
+    {
+      "id": "s6",
+      "weekend": "May 1-3",
+      "home": "maine",
+      "away": "umasslowell",
+      "gamesInSeries": 3,
+      "gamesPlayed": 0,
+      "homeWins": 0,
+      "awayWins": 0
+    },
+    {
+      "id": "s7",
+      "weekend": "May 14-16",
+      "home": "umbc",
+      "away": "njit",
+      "gamesInSeries": 3,
+      "gamesPlayed": 0,
+      "homeWins": 0,
+      "awayWins": 0
+    },
+    {
+      "id": "s8",
+      "weekend": "May 14-16",
+      "home": "ualbany",
+      "away": "binghamton",
+      "gamesInSeries": 3,
+      "gamesPlayed": 0,
+      "homeWins": 0,
+      "awayWins": 0
+    },
+    {
+      "id": "s9",
+      "weekend": "May 14-16",
+      "home": "bryant",
+      "away": "umasslowell",
+      "gamesInSeries": 3,
+      "gamesPlayed": 0,
+      "homeWins": 0,
+      "awayWins": 0
+    }
+  ],
+  "njitNonConferenceRemaining": [
+    { "date": "Apr 29", "opponent": "Fairleigh Dickinson", "home": true },
+    { "date": "May 5", "opponent": "Manhattan", "home": true },
+    { "date": "May 9", "opponent": "Boston College", "home": false },
+    { "date": "May 9", "opponent": "Boston College", "home": false }
+  ]
+}
