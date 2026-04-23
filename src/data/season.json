@@ -177,5 +177,8 @@
     { "date": "May 9", "opponent": "Boston College", "home": false },
     { "date": "May 9", "opponent": "Boston College", "home": false },
     { "date": "May 10", "opponent": "Boston College", "home": false }
-  ]
+  ],
+  "tieBreakers": {
+    "headToHead": {}
+  }
 }

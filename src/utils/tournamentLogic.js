@@ -1,6 +1,7 @@
 import seasonData from '../data/season.json'
 
 const CONF_GAMES = seasonData.meta.conferenceGamesPerTeam
+const HEAD_TO_HEAD = seasonData.tieBreakers?.headToHead ?? {}
 
 const toPct = (wins, losses) => {
   const total = wins + losses
@@ -10,21 +11,62 @@ const toPct = (wins, losses) => {
   return Number((wins / total).toFixed(3))
 }
 
+const getHeadToHeadKey = (teamAId, teamBId) =>
+  [teamAId, teamBId].sort().join('__')
+
+const compareHeadToHead = (teamA, teamB) => {
+  const key = getHeadToHeadKey(teamA.id, teamB.id)
+  const record = HEAD_TO_HEAD[key]
+
+  if (!record) {
+    return 0
+  }
+
+  const teamAWins = Number(record[teamA.id] ?? 0)
+  const teamBWins = Number(record[teamB.id] ?? 0)
+
+  if (teamAWins === teamBWins) {
+    return 0
+  }
+
+  // Negative means teamA should sort above teamB.
+  return teamBWins - teamAWins
+}
+
 export function getStandings(teams) {
   const sorted = [...teams]
     .map((team) => {
       const confGamesPlayed = team.confWins + team.confLosses
+      const overallGamesPlayed = team.overallWins + team.overallLosses
       return {
         ...team,
         confPct: toPct(team.confWins, team.confLosses),
         confGamesPlayed,
         confGamesRemaining: Math.max(CONF_GAMES - confGamesPlayed, 0),
+        overallPct:
+          overallGamesPlayed === 0
+            ? 0
+            : Number((team.overallWins / overallGamesPlayed).toFixed(3)),
       }
     })
     .sort((a, b) => {
       if (b.confPct !== a.confPct) {
         return b.confPct - a.confPct
       }
+
+      const headToHeadResult = compareHeadToHead(a, b)
+      if (headToHeadResult !== 0) {
+        return headToHeadResult
+      }
+
+      if (b.overallPct !== a.overallPct) {
+        return b.overallPct - a.overallPct
+      }
+
+      if (b.overallWins !== a.overallWins) {
+        return b.overallWins - a.overallWins
+      }
+
       return b.confWins - a.confWins
     })
 
