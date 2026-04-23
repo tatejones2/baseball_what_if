@@ -57,7 +57,7 @@ function StandingsTable({
                   {team.confWins}-{team.confLosses}
                 </td>
                 <td>{formatPct(team.confPct)}</td>
-                <td>{team.rank <= 6 ? team.gamesBehindFirst : team.gamesBehind}</td>
+                <td>{team.gamesBehindFirst.toFixed(1)}</td>
                 {!compact && (
                   <td>
                     {team.overallWins}-{team.overallLosses}
