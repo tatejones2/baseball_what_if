@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-04-23",
+    "lastUpdated": "2026-04-27",
     "season": 2026,
     "conference": "America East",
     "tournamentBerths": 6,
@@ -23,29 +23,29 @@
       "name": "UMBC",
       "shortName": "UMBC",
       "isNJIT": false,
-      "confWins": 7,
-      "confLosses": 5,
-      "overallWins": 19,
-      "overallLosses": 16
+      "confWins": 8,
+      "confLosses": 7,
+      "overallWins": 20,
+      "overallLosses": 18
     },
     {
       "id": "maine",
       "name": "Maine",
       "shortName": "ME",
       "isNJIT": false,
-      "confWins": 7,
-      "confLosses": 5,
-      "overallWins": 12,
-      "overallLosses": 24
+      "confWins": 9,
+      "confLosses": 6,
+      "overallWins": 14,
+      "overallLosses": 25
     },
     {
       "id": "bryant",
       "name": "Bryant",
       "shortName": "BRY",
       "isNJIT": false,
-      "confWins": 7,
+      "confWins": 10,
       "confLosses": 8,
-      "overallWins": 19,
+      "overallWins": 22,
       "overallLosses": 18
     },
     {
@@ -53,10 +53,10 @@
       "name": "UAlbany",
       "shortName": "ALB",
       "isNJIT": false,
-      "confWins": 5,
-      "confLosses": 7,
-      "overallWins": 10,
-      "overallLosses": 23
+      "confWins": 7,
+      "confLosses": 8,
+      "overallWins": 12,
+      "overallLosses": 24
     },
     {
       "id": "umasslowell",
@@ -64,52 +64,22 @@
       "shortName": "UML",
       "isNJIT": false,
       "confWins": 6,
-      "confLosses": 9,
+      "confLosses": 12,
       "overallWins": 16,
-      "overallLosses": 20
+      "overallLosses": 23
     },
     {
       "id": "njit",
       "name": "NJIT",
       "shortName": "NJIT",
       "isNJIT": true,
-      "confWins": 4,
-      "confLosses": 11,
-      "overallWins": 13,
-      "overallLosses": 22
+      "confWins": 5,
+      "confLosses": 13,
+      "overallWins": 14,
+      "overallLosses": 24
     }
   ],
   "remainingConferenceSeries": [
-    {
-      "id": "s1",
-      "weekend": "Apr 24-26",
-      "home": "ualbany",
-      "away": "njit",
-      "gamesInSeries": 3,
-      "gamesPlayed": 0,
-      "homeWins": 0,
-      "awayWins": 0
-    },
-    {
-      "id": "s2",
-      "weekend": "Apr 24-26",
-      "home": "umasslowell",
-      "away": "bryant",
-      "gamesInSeries": 3,
-      "gamesPlayed": 0,
-      "homeWins": 0,
-      "awayWins": 0
-    },
-    {
-      "id": "s3",
-      "weekend": "Apr 24-26",
-      "home": "binghamton",
-      "away": "maine",
-      "gamesInSeries": 3,
-      "gamesPlayed": 0,
-      "homeWins": 0,
-      "awayWins": 0
-    },
     {
       "id": "s4",
       "weekend": "May 1-3",
@@ -209,6 +179,11 @@
     { "date": "May 10", "opponent": "Boston College", "home": false }
   ],
   "tieBreakers": {
-    "headToHead": {}
+    "headToHead": {
+      "njit__ualbany": {
+        "njit": 1,
+        "ualbany": 2
+      }
+    }
   }
 }
