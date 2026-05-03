@@ -5,6 +5,15 @@ const HEAD_TO_HEAD = seasonData.tieBreakers?.headToHead ?? {}
 
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value))
 
+const getRemainingConferenceGames = (teamId) =>
+  seasonData.remainingConferenceSeries.reduce((total, series) => {
+    if (series.home === teamId || series.away === teamId) {
+      return total + (series.gamesInSeries - (series.gamesPlayed ?? 0))
+    }
+
+    return total
+  }, 0)
+
 const toPct = (wins, losses) => {
   const total = wins + losses
   if (total === 0) {
@@ -39,16 +48,19 @@ export function getStandings(teams) {
   const sorted = [...teams]
     .map((team) => {
       const confGamesPlayed = team.confWins + team.confLosses
-      const overallGamesPlayed = team.overallWins + team.overallLosses
+      const overallTies = Number(team.overallTies ?? 0)
+      const overallGamesPlayed = team.overallWins + team.overallLosses + overallTies
       return {
         ...team,
         confPct: toPct(team.confWins, team.confLosses),
         confGamesPlayed,
-        confGamesRemaining: Math.max(CONF_GAMES - confGamesPlayed, 0),
+        confGamesRemaining: getRemainingConferenceGames(team.id),
         overallPct:
           overallGamesPlayed === 0
             ? 0
-            : Number((team.overallWins / overallGamesPlayed).toFixed(3)),
+            : Number(
+                ((team.overallWins + overallTies * 0.5) / overallGamesPlayed).toFixed(3),
+              ),
       }
     })
     .sort((a, b) => {
@@ -222,8 +234,10 @@ export function estimateNjitTournamentOdds(
 
   const baselinePct = Object.fromEntries(
     teams.map((team) => {
-      const total = team.confWins + team.confLosses
-      return [team.id, total === 0 ? 0.5 : team.confWins / total]
+      const overallTies = Number(team.overallTies ?? 0)
+      const total = team.overallWins + team.overallLosses + overallTies
+      const pct = total === 0 ? 0.5 : (team.overallWins + overallTies * 0.5) / total
+      return [team.id, pct]
     }),
   )
 

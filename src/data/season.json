@@ -13,10 +13,10 @@
       "name": "Binghamton",
       "shortName": "BING",
       "isNJIT": false,
-      "confWins": 14,
-      "confLosses": 4,
-      "overallWins": 23,
-      "overallLosses": 15
+      "confWins": 13,
+      "confLosses": 5,
+      "overallWins": 24,
+      "overallLosses": 18
     },
     {
       "id": "umbc",
@@ -26,17 +26,17 @@
       "confWins": 10,
       "confLosses": 8,
       "overallWins": 22,
-      "overallLosses": 19
+      "overallLosses": 20
     },
     {
       "id": "maine",
       "name": "Maine",
       "shortName": "ME",
       "isNJIT": false,
-      "confWins": 10,
-      "confLosses": 8,
-      "overallWins": 15,
-      "overallLosses": 27
+      "confWins": 11,
+      "confLosses": 7,
+      "overallWins": 18,
+      "overallLosses": 26
     },
     {
       "id": "bryant",
@@ -46,7 +46,7 @@
       "confWins": 12,
       "confLosses": 9,
       "overallWins": 24,
-      "overallLosses": 19
+      "overallLosses": 20
     },
     {
       "id": "ualbany",
@@ -56,7 +56,7 @@
       "confWins": 8,
       "confLosses": 10,
       "overallWins": 13,
-      "overallLosses": 26
+      "overallLosses": 27
     },
     {
       "id": "umasslowell",
@@ -64,9 +64,9 @@
       "shortName": "UML",
       "isNJIT": false,
       "confWins": 6,
-      "confLosses": 11,
+      "confLosses": 13,
       "overallWins": 16,
-      "overallLosses": 23
+      "overallLosses": 26
     },
     {
       "id": "njit",
@@ -76,7 +76,8 @@
       "confWins": 6,
       "confLosses": 15,
       "overallWins": 15,
-      "overallLosses": 26
+      "overallLosses": 26,
+      "overallTies": 1
     }
   ],
   "remainingConferenceSeries": [
@@ -142,7 +143,6 @@
     }
   ],
   "njitNonConferenceRemaining": [
-    { "date": "Apr 29", "opponent": "Fairleigh Dickinson", "home": true },
     { "date": "May 5", "opponent": "Manhattan", "home": true },
     { "date": "May 9", "opponent": "Boston College", "home": false },
     { "date": "May 9", "opponent": "Boston College", "home": false },

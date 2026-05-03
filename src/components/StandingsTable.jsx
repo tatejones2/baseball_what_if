@@ -12,6 +12,14 @@ function formatPct(pct) {
   return pct.toFixed(3)
 }
 
+function formatOverallRecord(team) {
+  if (team.overallTies && team.overallTies > 0) {
+    return `${team.overallWins}-${team.overallLosses}-${team.overallTies}`
+  }
+
+  return `${team.overallWins}-${team.overallLosses}`
+}
+
 function StandingsTable({
   teams,
   highlightTeamId,
@@ -64,11 +72,7 @@ function StandingsTable({
                 </td>
                 <td>{formatPct(team.confPct)}</td>
                 <td>{team.gamesBehindFirst.toFixed(1)}</td>
-                {!compact && (
-                  <td>
-                    {team.overallWins}-{team.overallLosses}
-                  </td>
-                )}
+                {!compact && <td>{formatOverallRecord(team)}</td>}
                 {!compact && <td>{team.confGamesRemaining}</td>}
                 <td>
                   <span className={`status-badge ${statusClass[status]}`}>
